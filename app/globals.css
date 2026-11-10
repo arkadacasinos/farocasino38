@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@theme inline {
+  --font-sans: 'Inter Variable', sans-serif;
+}
+
+@layer base {
+  html, body {
+    background-color: #121316;
+    color: #e5e7eb;
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+/* Mangled CSS classes for Faro Casino layout */
+@layer components {
+  .f9k2-rail-open:target {
+    transform: translateX(0);
+    visibility: visible;
+  }
+  .f9k2-scrim-active:target ~ .f9k2-scrim-layer {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .f9k2-glass-card {
+    background: linear-gradient(180deg, rgba(26, 28, 33, 0.85) 0%, rgba(18, 19, 22, 0.95) 100%);
+    border: 1px solid rgba(245, 166, 35, 0.22);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+  }
+  .f9k2-hero-glow {
+    position: relative;
+    border: 1px solid rgba(245, 166, 35, 0.45);
+    background: radial-gradient(circle at 75% 40%, rgba(245, 166, 35, 0.12) 0%, rgba(20, 22, 26, 0.95) 70%);
+  }
+  .f9k2-gold-btn {
+    background: linear-gradient(180deg, #ffbe3b 0%, #e89512 100%);
+    color: #121316;
+    font-weight: 700;
+    box-shadow: 0 4px 18px rgba(245, 166, 35, 0.35);
+    transition: all 0.2s ease;
+  }
+  .f9k2-gold-btn:hover {
+    background: linear-gradient(180deg, #ffd06b 0%, #f5a623 100%);
+    box-shadow: 0 6px 24px rgba(245, 166, 35, 0.55);
+    transform: translateY(-1px);
+  }
+  .f9k2-subcard-btn {
+    background: #252830;
+    color: #ffffff;
+    transition: all 0.2s ease;
+  }
+  .f9k2-subcard-btn:hover {
+    background: #313540;
+    color: #f5a623;
+  }
+}
